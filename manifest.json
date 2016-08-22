@@ -1,0 +1,33 @@
+{
+  "name": "CodeChef Plus Plus",
+  "description": "Extension to improve experience of using CodeChef",
+  "version": "1.0.0",
+  "short_name": "CCer",
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.codechef.com/*"],
+      "js": [ "js/jquery-1.11.1.js","js/main.js"],
+      "css":["css/style.css"],
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    "js/popup.js",
+    "js/jquery-1.11.1.js",
+    "css/bootstrap.min.css",
+    "js/highcharts.js"
+  ],
+  "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "CodeChef Plus Plus",
+      "default_icon": "images/icon.png"
+  },
+  "manifest_version": 2
+}
